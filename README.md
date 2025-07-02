@@ -1,10 +1,16 @@
 # Arch Network Python SDK
 
-A comprehensive Python implementation of the Arch Network RPC provider, fully compatible with the official [Arch Network RPC API](https://book.arch.network/rpc/http-methods.html).
+---
+
+# USE AT OWN RISK - NOT GUARANTEED TO WORK 
+
+---
+
+A  Python implementation of the Arch Network RPC provider, which aims to be compatible with the official [Arch Network RPC API](https://book.arch.network/rpc/http-methods.html).
 
 ## 🚀 Features
 
-- ✅ **Complete RPC Method Coverage** - All 15 official RPC methods implemented
+- ✅ **RPC Method Coverage** - All 15 official RPC methods implemented
 - ✅ **Async/Await Support** - Built with `aiohttp` for high performance
 - ✅ **Type Safety** - Full type hints and dataclasses
 - ✅ **Error Handling** - Comprehensive error handling with retries
