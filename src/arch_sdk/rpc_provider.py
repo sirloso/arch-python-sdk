@@ -124,7 +124,7 @@ class ArchRPCProvider:
         Returns:
             Account information object with data, owner, utxo, is_executable, and tag fields
         """
-        return await self._make_request("read_account_info", [pubkey])
+        return await self._make_request("read_account_info", pubkey)
     
     async def get_account_address(self, account_pubkey: List[int]) -> str:
         """
@@ -136,11 +136,11 @@ class ArchRPCProvider:
         Returns:
             Bitcoin address string (format depends on network mode)
         """
-        return await self._make_request("get_account_address", [account_pubkey])
+        return await self._make_request("get_account_address", account_pubkey)
     
     async def get_program_accounts(self, 
                                    program_id: List[int], 
-                                   filters: Optional[List[Dict[str, Any]]] = None) -> List[Dict[str, Any]]:
+                                   filters: Optional[List[Dict[str, Any]]] = []) -> List[Dict[str, Any]]:
         """
         Fetches all accounts owned by a specified program ID.
         
